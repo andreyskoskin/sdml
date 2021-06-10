@@ -1,0 +1,3 @@
+(executable
+  (name sdml_test)
+  (libraries sdml))

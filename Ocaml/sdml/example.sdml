@@ -1,0 +1,93 @@
+location {
+
+	name {
+		full  = Saint Petersburg
+		short = St.Pete
+		tiny  = SPb
+	}
+
+	region  = Saint Petersburg City
+	country = Russia
+
+	loc : geo {
+		lat = 59.89
+		lon = 30.26
+	}
+
+	loc : 3D {
+		x = 1
+		y = 2
+		z = 3
+	}
+
+	locs : geo <
+
+		lat  = 1
+		lon  = 2
+		tags = foo bar
+	-
+		lat  = 3
+		lon  = 4
+		tags = gee
+	>
+
+	expose : ports = 8080 8081
+
+	components {
+
+		cleaner : service {
+			replicas = 2
+		}
+
+		listener : listener {
+			goroutines = 20
+		}
+	}
+
+	addresses [
+
+		struct {
+			host = localhost
+			port = 9000
+		}
+
+		string {
+			addr = localhost:9000
+		}
+	]
+
+	stats : matrix (
+		1  2
+		-3 4
+		5  6
+		7  8
+	)
+
+	all-stats : cube (
+		[
+			1 2
+			3 4
+		-
+			5 6
+			7 8
+		]
+	)
+
+	cmd (
+		dd
+		-in=/dev/random
+		-out=/dev/null
+	)
+
+	cmd {
+		linux (
+			dd
+			-in=/dev/random
+			-out=/dev/null
+		)
+		windows (
+			cmd.exe
+			echo "Hello, World!"
+		)
+	}
+}
