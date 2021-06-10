@@ -3,19 +3,19 @@ Structured (or Softly typed) data marjup language
 
 Basic structure:
 
-binding ::= <name> [":" <tag>] <value>
+binding ::= `<name>` `[":"` `<tag>` `]` `<value>`
 
-<name> is alphanumeric, basicly any character except :={[< and newline
+`<name>` is alphanumeric, basicly any character except `:={[<` and newline
 
-<tag> is the same as <name>
+`<tag>` is the same as `<name>`
 
-<value> is:
+`<value>` is:
 
-"=" - an "atom", a sequence of characters until endline
+`"=" - an "atom", a sequence of characters until endline
 "(" - a "list", a sequence of atoms, ending with single-line ")"
 "{" - a "record" - a list of <binding> separated by newline and endin by "}"
 "[" - an "array" - a list of (<tag> <value>)
-"<" - a "table" - a list of "record"s, separated by single-line "-", ending by ">"
+"<" - a "table" - a list of "record"s, separated by single-line "-", ending by ">"`
 
 The document can be eiather a record or an array
 
