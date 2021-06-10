@@ -1,5 +1,5 @@
 # sdml
-Structured (or Softly typed) data marjup language
+Structured (or Softly typed) data markup language
 
 Basic structure:
 
